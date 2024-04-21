@@ -11,7 +11,7 @@ Criar sessao
     ...    Content-Type=application/json
     Create Session
     ...    alias=APIServeRest
-    ...    url=https://serverest.dev
+    ...    url=https://serverest.d
     ...    verify=True
     ...    headers=${headers}
 
