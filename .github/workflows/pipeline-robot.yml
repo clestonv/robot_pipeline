@@ -14,6 +14,11 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: '3.12'
+
+      - name: Instalar Dependencias do Projeto
+        run: |
+          pip install robotframework
+          pip install robotframework-requests
       
       - name: Execução dos Testes de API
         run: |
