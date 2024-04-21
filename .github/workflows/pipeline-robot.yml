@@ -1,0 +1,11 @@
+name: Robot example
+
+on: push
+
+jobs:
+  test_api:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clonagem do repositorio
+        uses: actions/checkout@v4
