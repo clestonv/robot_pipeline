@@ -6,6 +6,14 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
+    permissions:
+        contents: read
+        pages: write
+        id-token: write
+    environment:
+        name: github-pages
+        url: https://clestonv.github.io/robot_pipeline/report.html
+
     steps:
       - name: Clonagem Projeto
         uses: actions/checkout@v3
@@ -30,4 +38,16 @@ jobs:
         with:
           name: resultado-testes
           path: ./results
+
+      - name: Configurar Site de Relatorios dos Testes
+        uses: actions/configure-pages@v2
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: results/
+
+      - name: Sunir Site de Relatorios dos Testes
+        id: deployment
+        uses: actions/deploy-pages@v1
     
