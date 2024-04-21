@@ -33,24 +33,24 @@ jobs:
           robot --outputdir results/ tests/
 
       - name: Salvando Resultado dos Testes
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         if: always()
         with:
           name: resultado-testes
           path: /results
 
       - name: Configurar Site de Relatorios dos Testes
-        uses: actions/configure-pages@v2
+        uses: actions/configure-pages@v5
         if: always()
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3
         if: always()
         with:
           path: results/
 
       - name: Sunir Site de Relatorios dos Testes
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4
         if: always()
     
