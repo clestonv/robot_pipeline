@@ -9,3 +9,8 @@ jobs:
     steps:
       - name: Clonagem do repositorio
         uses: actions/checkout@v4
+
+      - name: Configuração do Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: '3.12'
