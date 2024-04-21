@@ -41,13 +41,16 @@ jobs:
 
       - name: Configurar Site de Relatorios dos Testes
         uses: actions/configure-pages@v2
+        if: always()
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
+        if: always()
         with:
           path: results/
 
       - name: Sunir Site de Relatorios dos Testes
         id: deployment
         uses: actions/deploy-pages@v1
+        if: always()
     
