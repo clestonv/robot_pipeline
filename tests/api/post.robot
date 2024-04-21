@@ -1,5 +1,5 @@
 *** Settings ***
-Resource    ../resources/common.resource
+Resource    ../../resources/api/common.resource
 *** Variables ***
 
 

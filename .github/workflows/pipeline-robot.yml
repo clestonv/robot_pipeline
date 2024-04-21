@@ -4,6 +4,7 @@ on: push
 
 jobs:
   test:
+    name: Testes de API
     runs-on: ubuntu-latest
 
     permissions:
@@ -27,6 +28,7 @@ jobs:
         run: |
           pip install robotframework
           pip install robotframework-requests
+          pip install robotframework-seleniumlibrary
       
       - name: Execução dos Testes de API
         run: |
@@ -53,4 +55,3 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
         if: always()
-    
