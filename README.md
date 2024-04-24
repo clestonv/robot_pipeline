@@ -4,7 +4,7 @@
 
 ## 📋 Sobre
 
-Este **Projeto** foi criado para um mini curso de CI/CD com Robot Framework usando GitActions
+Este **Projeto** Foi criado para um mini curso de CI/CD com Robot Framework usando GitActions
 
 ## 🚀 Tecnologias
 - [Python](https://www.python.org/)
